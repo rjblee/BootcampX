@@ -1,9 +1,9 @@
 CREATE TABLE students (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(30) NOT NULL,
-  email VARCHAR (50),
-  phone VARCHAR (10),
-  github VARCHAR (50),
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR (255),
+  phone VARCHAR (32),
+  github VARCHAR (255),
   start_date DATE,
   end_date DATE,
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
@@ -11,7 +11,7 @@ CREATE TABLE students (
 
 CREATE TABLE cohorts (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(30) NOT NULL,
+  name VARCHAR(255) NOT NULL,
   start_date DATE,
   end_date DATE
 );
